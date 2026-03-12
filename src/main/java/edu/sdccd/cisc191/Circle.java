@@ -23,4 +23,22 @@ public class Circle extends Shape implements Measurable {
     public double area() {
         return Math.PI * Math.pow(getRadius(), 2);
     } 
+
+    @Override // overriding equals()
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        Circle other = (Circle) obj;
+
+        return Objects.equals(getName(), other.getName()) && Objects.equals(getRadius(), other.getRadius());
+    }
+
+    @Override // overring hashCode()
+    public int hashCode() {
+        return Objects.hash(getName(), getRadius());
+    }
 }

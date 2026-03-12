@@ -16,11 +16,12 @@ public class Main {
             System.out.println(" - " + s.describe() + " area=" + s.area());
         }
         
-        shapes.sort(Comparator.comparingDouble(Shape::area));
+        // comparing shapes based on area and then by name
+        shapes.sort(Comparator.comparingDouble(Shape::area)
+            .thenComparing(Shape::getName));
+
+        // sorting by area
         System.out.println("\nSorted by area (lowest to greatest):");
-        /*for (Shape s:shapes) {
-            System.out.println(" - " + s.describe() + " area=" + s.area());
-        } */
         shapes.forEach(System.out::println);
     }
 }

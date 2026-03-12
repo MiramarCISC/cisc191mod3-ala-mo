@@ -12,14 +12,15 @@ public abstract class Shape implements Comparable<Shape> {
     }
     
     public abstract double area();
-    //abstract double perimeter();
+    
+    //public abstract double perimeter();
     
     public String describe() {
         return "Name=" + getName() + ","; 
     }
 
     @Override
-    public int compareTo(Shape other) {
+    public int compareTo(Shape other) { // comparing 
         return getName().compareTo(other.getName());
     }
 }
