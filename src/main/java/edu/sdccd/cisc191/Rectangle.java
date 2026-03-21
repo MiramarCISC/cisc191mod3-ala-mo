@@ -41,6 +41,7 @@ public class Rectangle extends Shape implements Measurable {
         }
         if (obj == null) {
             return false;
+            //recommend adding instanceof check to verify that references point to correct object type
         }
         Rectangle other = (Rectangle) obj;
 

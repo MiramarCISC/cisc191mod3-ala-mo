@@ -13,7 +13,7 @@ public class Triangle extends Shape implements Measurable {
         super(name); // reference from Shape class
         
         if (name == null || name.trim().isEmpty() || base < 0 || width < 0 || height < 0) {
-            throw new IllegalArgumentException("There is an invalid input for Rectangle.");
+            throw new IllegalArgumentException("There is an invalid input for Triangle."); //corrected exception message;
         }
         
         // initializing private fields

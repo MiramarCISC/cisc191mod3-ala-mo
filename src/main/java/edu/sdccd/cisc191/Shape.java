@@ -12,7 +12,7 @@ public abstract class Shape implements Comparable<Shape> {
     }
     
     public abstract double area();
-    
+    //perimeter method should be implemented as part of the parent class abstract methods as shown in the lab requirements
     //public abstract double perimeter();
     
     public String describe() {
